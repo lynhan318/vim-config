@@ -1,3 +1,5 @@
 autoload
 bundle
 session
+.netrwhist
+.DS_Store
