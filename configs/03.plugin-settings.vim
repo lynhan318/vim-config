@@ -29,6 +29,7 @@ let g:ctrlp_custom_ignore = {
 let g:prettier#autoformat = 1
 let g:airline_powerline_fonts = 1
 let g:EasyMotion_smartcase = 1
+autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.md,*.vue,*.yaml,*.html,*.go Prettier
 " AUTO CLOSE TAGS
 let g:closetag_filenames = '*.html,*.jsx,*.tsx,*.js'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
@@ -63,9 +64,13 @@ let g:LanguageClient_serverCommands = {
     \ 'javascript': ['/Users/tiny/javascript-typescript-langserver/lib/javascript-typescript-stdio'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
     \ }
-
 "ALE
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
 let g:airline#extensions#ale#enabled = 1
-
+" Snippet
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-j>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips","my_snippets"]
+let g:UltiSnipsEnableSnipMate = 0
