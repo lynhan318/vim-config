@@ -1,0 +1,19 @@
+{
+  "css.enable": true,
+  "html.enable": true,
+  "json.enable": true,
+  "css.validate": true,
+  "tsserver.log": "verbose",
+  "tsserver.enable": true,
+  "tsserver.enableJavascript": false,
+  "tsserver.formatOnType": false,
+  "tslint.exclude": ["node_modules"],
+  "tslint.jsEnable": true,
+  "tslint.ignoreDefinitionFiles": true,
+  "tslint.suppressWhileTypeErrorsPresent": false,
+  "tslint.alwaysShowRuleFailuresAsWarnings": true,
+  "coc.preferences.bracketEnterImprove": true,
+  "coc.preferences.enableFloatHighlight": true,
+  "coc.preferences.snippets.enable": true,
+  "coc.preferences.previewAutoClose": true
+}
