@@ -9,7 +9,6 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'rking/ag.vim'
 "typescript
 Plug 'ianks/vim-tsx'
 Plug 'herringtondarkholme/yats.vim'
@@ -18,7 +17,6 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'scrooloose/nerdtree'
 Plug 'alvan/vim-closetag'
 Plug 'easymotion/vim-easymotion'
-Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
@@ -37,7 +35,9 @@ Plug 'Shougo/denite.nvim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
-Plug '907th/vim-auto-save'
+"fzf
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'dyng/ctrlsf.vim'
 call plug#end()
 
 

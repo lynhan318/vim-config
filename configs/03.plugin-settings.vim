@@ -96,3 +96,8 @@ function! s:show_documentation()
   endif
 endfunction
 "===== end of Coc-nvim======
+"leaderF
+let g:Lf_ShortcutF = '<C-P>'
+let g:Lf_PreviewInPopup = 1
+"ctrslf
+let g:ctrlsf_default_view_mode = 'compact'

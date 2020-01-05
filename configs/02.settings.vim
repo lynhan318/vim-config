@@ -19,7 +19,6 @@ set number
 set relativenumber
 set ignorecase
 set smartcase
-set cursorline
 
 set tabstop=4
 set softtabstop=0
@@ -64,4 +63,6 @@ vnoremap <silent> y y:call ClipboardYank()<cr>
 vnoremap <silent> d d:call ClipboardYank()<cr>
 nnoremap <silent> p :call ClipboardPaste()<cr>p
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-
+"ctrslf
+nmap <leader>s <Plug>CtrlSFPrompt
+vmap <leader>sw <Plug>CtrlSFVwordPath
