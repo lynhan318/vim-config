@@ -1,8 +1,15 @@
 call plug#begin('~/.config/nvim/bundle')
-" vimm for go
+
+" vimm for go=========
 Plug 'jsfaint/coc-neoinclude'
-" vim for vue
-" end
+"end ==================
+" python==============
+Plug 'zchee/deoplete-jedi'
+Plug 'Yggdroot/indentLine'
+Plug 'davidhalter/jedi-vim'
+Plug 'kangol/vim-pudb'
+"end=================
+
 Plug 'Shougo/neoinclude.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'autozimu/LanguageClient-neovim', {
@@ -28,7 +35,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'galooshi/vim-import-js'
 Plug 'Shougo/denite.nvim'
 "snippets
@@ -39,5 +45,3 @@ Plug 'SirVer/ultisnips'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'dyng/ctrlsf.vim'
 call plug#end()
-
-

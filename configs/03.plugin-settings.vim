@@ -1,7 +1,7 @@
 "NERDTree
 map <C-b> :NERDTreeToggle<CR>
 map <C-i> :NERDTreeFind<CR>
-let g:NERDTreePatternMatchHighlightFullName = 1 
+let g:NERDTreePatternMatchHighlightFullName = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
@@ -12,7 +12,7 @@ let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycach
 let g:NERDTreeShowBookmarks=1
 "typescript
 let g:typescript_indent_disable = 1
-"Theme 
+"Theme
 syntax enable
 set background=dark
 highlight Normal ctermbg=None
@@ -35,14 +35,14 @@ let g:ctrlp_custom_ignore = {
     \ 'file': 'tags\|tags.lock\|tags.temp',
 \ }
 " Prettier
-let g:prettier#autoformat = 1
-let g:prettier#config#print_width = 80
-let g:prettier#config#trailing_comma = 'es5'
-let g:prettier#config#jsx_bracket_same_line = 'true'
-let g:prettier#config#jsxSingleQuote = 'true'
-let g:prettier#config#bracket_spacing = 'true'
-let g:prettier#config#arrow_parens = 'always'
-autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.json,*.md,*.vue,*.yaml,*.html,*.go Prettier
+"let g:prettier#autoformat = 1
+"let g:prettier#config#print_width = 80
+"let g:prettier#config#trailing_comma = 'es5'
+"let g:prettier#config#jsx_bracket_same_line = 'true'
+"let g:prettier#config#jsxSingleQuote = 'true'
+"let g:prettier#config#bracket_spacing = 'true'
+"let g:prettier#config#arrow_parens = 'always'
+"autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.json,*.md,*.vue,*.yaml,*.html,*.py Prettier
 " AUTO CLOSE TAGS
 let g:closetag_filenames = '*.html,*.jsx,*.tsx,*.js,*.vue'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js,*.vue'
@@ -62,6 +62,8 @@ let bclose_multiple = 0
 "let g:python3_host_prog = '/Users/tiny/.pyenv/versions/neovim3/bin/python'
 "MULTI COSUR
 let g:multi_cursor_select_all_word_key = '<c-a>'
+let g:multi_cursor_quit_key='<Esc>'
+let g:multi_cursor_exit_from_insert_mode=1
 "Emmet
 let g:user_emmet_leader_key='<C-Z>'
 let g:jsx_ext_required = 1
@@ -69,19 +71,27 @@ let g:jsx_pragma_required = 1
 "ALE
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['tslint'],
+\   'python': ['pylint'],
+\}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace','prettier'],
+\   'python': ['black']
+\}
+let g:ale_fix_on_save = 1
+let g:ale_completion_enabled = 1
 " ======= Snippet =========
 let g:UltiSnipsExpandTrigger="<c-c>"
-let g:UltiSnipsJumpForwardTrigger="<c-c>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
-let g:UltiSnipsJumpBackwardTrigger="<c-c>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 " Use <C-l> for trigger snippet expand.
 "=============end snippet==============
 " Easymotion
 let g:EasyMotion_smartcase = 1
 
-"auto save
-let g:auto_save = 0
-let g:auto_save_events = ["InsertLeave", "TextChanged"]
 "====== COC-NVIM ======
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-json']
 set updatetime=300
@@ -101,3 +111,9 @@ let g:Lf_ShortcutF = '<C-P>'
 let g:Lf_PreviewInPopup = 1
 "ctrslf
 let g:ctrlsf_default_view_mode = 'compact'
+
+
+"***PYTHON SETUP***
+let g:jedi#completions_enabled = 0
+let g:jedi#use_splits_not_buffers = "right"
+let g:indentLine_enabled = 0

@@ -50,10 +50,10 @@ noremap Y y$
 nmap <silent> ff <Plug>(easymotion-overwin-f2)
 nmap <silent> fl <Plug>(easymotion-overwin-line)
 nmap <leader>rn <Plug>(coc-rename)
-nmap <silent> <c-k> :wincmd k<CR>
-nmap <silent> <c-j> :wincmd j<CR>
-nmap <silent> <c-h> :wincmd h<CR>
-nmap <silent> <c-l> :wincmd l<CR>
+noremap <silent> <c-k> :wincmd k<CR>
+noremap <silent> <c-j> :wincmd j<CR>
+noremap <silent> <c-h> :wincmd h<CR>
+noremap <silent> <c-l> :wincmd l<CR>
 
 "escape highlight search
 "copy/pase
@@ -66,3 +66,5 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 "ctrslf
 nmap <leader>s <Plug>CtrlSFPrompt
 vmap <leader>sw <Plug>CtrlSFVwordPath
+"terminal mapping
+tnoremap <Esc> <C-\><C-n>
